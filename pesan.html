@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Laundry | WashUp</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>Wash<span>Up.</span></h2>
+            <p>Laundry Service</p>
+        </div>
+
+        <nav class="menu">
+            <a href="index.html" class="menu-link"><span>▦</span> Dashboard</a>
+            <a href="index.html#layanan" class="menu-link"><span>♧</span> Layanan Laundry</a>
+            <a href="pesan.html" class="menu-link active"><span>＋</span> Pesan Laundry</a>
+            <a href="riwayat.html" class="menu-link"><span>▤</span> Riwayat Pesanan</a>
+            <a href="pembayaran.html" class="menu-link"><span>▣</span> Pembayaran</a>
+            <a href="tracking.html" class="menu-link"><span>◷</span> Status Pesanan</a>
+            <a href="profil.html" class="menu-link"><span>♙</span> Profil Saya</a>
+            <a href="#" class="menu-link logout-link" id="logoutBtn"><span>⇥</span> Logout</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>© 2026 WashUp Laundry</p>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h3>Pesan Laundry</h3>
+                <p>Buat pesanan laundry dengan mudah.</p>
+            </div>
+
+            <div class="user-info">
+                <div class="user-avatar" id="userAvatar">U</div>
+                <div>
+                    <h4 id="dashboardUserName">User</h4>
+                    <p>Customer</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- FORM PEMESANAN -->
+        <section class="content-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Form Pemesanan</h2>
+                    <p>Lengkapi informasi berikut untuk membuat pesanan.</p>
+                </div>
+            </div>
+
+            <form id="orderForm" class="crud-form">
+
+                <label for="service">Jenis Layanan</label>
+                <select id="service" required>
+                    <option value="">-- Pilih Layanan --</option>
+                    <option value="Laundry Kiloan">Laundry Kiloan - Rp7.000/kg</option>
+                    <option value="Setrika">Setrika - Rp5.000/kg</option>
+                    <option value="Laundry Express">Laundry Express - Rp12.000/kg</option>
+                </select>
+
+                <label for="weight">Estimasi Berat (kg)</label>
+                <input
+                    type="number"
+                    id="weight"
+                    min="1"
+                    step="0.1"
+                    placeholder="Contoh: 3"
+                    required
+                >
+
+                <label for="phone">Nomor HP</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Masukkan nomor HP"
+                    required
+                >
+
+                <label for="address">Alamat Penjemputan</label>
+                <textarea
+                    id="address"
+                    rows="3"
+                    placeholder="Masukkan alamat lengkap"
+                    required
+                ></textarea>
+
+                <label for="pickupDate">Jadwal Penjemputan</label>
+                <input type="datetime-local" id="pickupDate" required>
+
+                <label for="notes">Catatan Tambahan (Opsional)</label>
+                <textarea
+                    id="notes"
+                    rows="3"
+                    placeholder="Contoh: pakaian dipisahkan berdasarkan warna"
+                ></textarea>
+
+                <div class="price-preview">
+                    <p>Estimasi Total Biaya</p>
+                    <h2 id="estimatedTotal">Rp0</h2>
+                    <small>Harga akhir dapat menyesuaikan berat setelah ditimbang.</small>
+                </div>
+
+                <button type="submit" id="submitOrderBtn" class="primary-button">
+                    Buat Pesanan
+                </button>
+
+                <button type="button" id="cancelEditBtn" class="secondary-button" hidden>
+                    Batal Edit
+                </button>
+
+            </form>
+        </section>
+
+    </main>
+</div>
+
+<script src="js/order.js"></script>
+</body>
+</html>

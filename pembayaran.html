@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran - WashUp Laundry</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>WashUp<span>.</span></h2>
+            <p>Laundry Service</p>
+        </div>
+
+        <nav class="sidebar-menu">
+            <a href="index.html">Dashboard</a>
+            <a href="index.html#layanan">Layanan</a>
+            <a href="pesan.html">Pesan Laundry</a>
+            <a href="riwayat.html">Riwayat Pesanan</a>
+            <a href="pembayaran.html" class="active">Pembayaran</a>
+            <a href="tracking.html">Lacak Pesanan</a>
+            <a href="profil.html">Profil Saya</a>
+            <a href="#" id="logoutBtn">Logout</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <h2>Pembayaran</h2>
+                <p>Kelola pembayaran pesanan laundry kamu.</p>
+            </div>
+
+            <div class="topbar-user">
+                <div class="user-avatar" id="userAvatar">U</div>
+                <span id="paymentUserName">Pengguna</span>
+            </div>
+        </header>
+
+        <section class="payment-section">
+            <div class="section-heading">
+                <h2>Tagihan Pesanan</h2>
+                <p>Pilih pesanan yang ingin kamu bayarkan.</p>
+            </div>
+
+            <div id="paymentOrderList" class="payment-order-list">
+                <p>Memuat pesanan...</p>
+            </div>
+
+            <div class="payment-form-card">
+                <h3>Form Pembayaran</h3>
+
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <label for="orderSelect">Pilih Pesanan</label>
+                        <select id="orderSelect" required>
+                            <option value="">-- Pilih pesanan --</option>
+                        </select>
+                    </div>
+
+                    <div class="payment-total">
+                        <span>Total Tagihan</span>
+                        <strong id="paymentTotal">Rp0</strong>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="paymentMethod">Metode Pembayaran</label>
+                        <select id="paymentMethod" required>
+                            <option value="">-- Pilih metode --</option>
+                            <option value="Transfer Bank">Transfer Bank</option>
+                            <option value="E-Wallet">E-Wallet</option>
+                        </select>
+                    </div>
+
+                    <div class="payment-instruction" id="paymentInstruction">
+                        Pilih pesanan dan metode pembayaran untuk melihat instruksi.
+                    </div>
+
+                    <div class="form-group">
+                        <label for="paymentProof">Bukti Pembayaran</label>
+                        <input
+                            type="file"
+                            id="paymentProof"
+                            accept="image/png, image/jpeg, image/jpg"
+                            required
+                        >
+                        <small>Format JPG atau PNG, maksimal 500 KB.</small>
+                        <p id="proofFileName" class="proof-file-name"></p>
+                    </div>
+
+                    <button type="submit" class="primary-button" id="submitPaymentBtn">
+                        Kirim Bukti Pembayaran
+                    </button>
+                </form>
+            </div>
+
+            <div class="payment-history-card">
+                <h3>Riwayat Pembayaran</h3>
+                <div class="table-container">
+                    <table class="order-table">
+                        <thead>
+                            <tr>
+                                <th>ID Pesanan</th>
+                                <th>Metode</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="paymentHistoryTable">
+                            <tr>
+                                <td colspan="4">Belum ada riwayat pembayaran.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="js/payment.js"></script>
+</body>
+</html>

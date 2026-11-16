@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pesanan - WashUp Laundry</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>WashUp<span>.</span></h2>
+            <p>Laundry Service</p>
+        </div>
+
+        <nav class="sidebar-menu">
+            <a href="index.html">Dashboard</a>
+            <a href="index.html#layanan">Layanan</a>
+            <a href="pesan.html">Pesan Laundry</a>
+            <a href="riwayat.html">Riwayat Pesanan</a>
+            <a href="pembayaran.html">Pembayaran</a>
+            <a href="tracking.html" class="active">Lacak Pesanan</a>
+            <a href="profil.html">Profil Saya</a>
+            <a href="#" id="logoutBtn">Logout</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Lacak Pesanan</h2>
+                <p>Pantau perkembangan laundry kamu di sini.</p>
+            </div>
+
+            <div class="topbar-user">
+                <div class="user-avatar" id="userAvatar">U</div>
+                <span id="trackingUserName">Pengguna</span>
+            </div>
+        </header>
+
+        <section class="tracking-section">
+
+            <div class="section-heading">
+                <h2>Tracking Laundry</h2>
+                <p>Pilih pesanan untuk melihat proses pengerjaannya.</p>
+            </div>
+
+            <div class="tracking-search-card">
+                <label for="trackingOrderSelect">Pilih ID Pesanan</label>
+
+                <select id="trackingOrderSelect">
+                    <option value="">-- Pilih pesanan --</option>
+                </select>
+            </div>
+
+            <div id="trackingContent">
+                <div class="tracking-empty">
+                    <h3>Belum ada pesanan dipilih</h3>
+                    <p>Silakan pilih salah satu pesanan untuk melihat statusnya.</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+</div>
+
+<script src="js/tracking.js"></script>
+</body>
+</html>

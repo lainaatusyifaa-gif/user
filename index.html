@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard User | WashUp Laundry</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>Wash<span>Up.</span></h2>
+            <p>Laundry Service</p>
+        </div>
+
+        <nav class="menu">
+            <a href="index.html" class="menu-link active">
+                <span>▦</span> Dashboard
+            </a>
+            <a href="#layanan" class="menu-link">
+                <span>♧</span> Layanan Laundry
+            </a>
+            <a href="pesan.html" class="menu-link">
+                <span>＋</span> Pesan Laundry
+            </a>
+            <a href="riwayat.html" class="menu-link">
+                <span>▤</span> Riwayat Pesanan
+            </a>
+            <a href="pembayaran.html" class="menu-link">
+                <span>▣</span> Pembayaran
+            </a>
+            <a href="tracking.html" class="menu-link">
+                <span>◷</span> Status Pesanan
+            </a>
+            <a href="profil.html" class="menu-link">
+                <span>♙</span> Profil Saya
+            </a>
+            <a href="#" class="menu-link logout-link" id="logoutBtn">
+                <span>⇥</span> Logout
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>© 2026 WashUp Laundry</p>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- HEADER -->
+        <header class="topbar">
+            <div>
+                <h3>Dashboard</h3>
+                <p id="currentDate">Ringkasan aktivitas laundry kamu</p>
+            </div>
+
+            <div class="user-info">
+                <div class="user-avatar" id="userAvatar">U</div>
+                <div>
+                    <h4 id="dashboardUserName">User</h4>
+                    <p>Customer</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- WELCOME -->
+        <section class="welcome-section">
+            <div>
+                <h1>Halo, <span id="welcomeUserName">User</span>!</h1>
+                <p>
+                    Selamat datang di WashUp Laundry.
+                    Urusan laundry jadi lebih mudah dan praktis.
+                </p>
+                <a href="pesan.html" class="primary-button">
+                    + Pesan Laundry
+                </a>
+            </div>
+        </section>
+
+        <!-- SUMMARY -->
+        <section class="summary-section">
+
+            <div class="summary-card">
+                <div class="summary-icon">▤</div>
+                <div>
+                    <p>Total Pesanan</p>
+                    <h2 id="totalOrders">0</h2>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-icon">◷</div>
+                <div>
+                    <p>Sedang Diproses</p>
+                    <h2 id="processingOrders">0</h2>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-icon">♧</div>
+                <div>
+                    <p>Dalam Pengiriman</p>
+                    <h2 id="deliveryOrders">0</h2>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-icon">✓</div>
+                <div>
+                    <p>Pesanan Selesai</p>
+                    <h2 id="completedOrders">0</h2>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SERVICES -->
+        <section class="content-section" id="layanan">
+            <div class="section-heading">
+                <div>
+                    <h2>Layanan Kami</h2>
+                    <p>Pilih layanan sesuai kebutuhan laundry kamu.</p>
+                </div>
+            </div>
+
+            <div class="service-container">
+
+                <div class="service-card">
+                    <div class="service-icon">👕</div>
+                    <h3>Laundry Kiloan</h3>
+                    <p>Cuci dan keringkan pakaian sehari-hari.</p>
+                    <h4>Rp7.000 <span>/ kg</span></h4>
+                    <a href="pesan.html" class="service-button">
+                        Pesan Sekarang
+                    </a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">♨</div>
+                    <h3>Setrika</h3>
+                    <p>Membuat pakaian lebih rapi dan siap digunakan.</p>
+                    <h4>Rp5.000 <span>/ kg</span></h4>
+                    <a href="pesan.html" class="service-button">
+                        Pesan Sekarang
+                    </a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Laundry Express</h3>
+                    <p>Layanan laundry dengan pengerjaan lebih cepat.</p>
+                    <h4>Rp12.000 <span>/ kg</span></h4>
+                    <a href="pesan.html" class="service-button">
+                        Pesan Sekarang
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- RECENT ORDERS -->
+        <section class="content-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Pesanan Terbaru</h2>
+                    <p>Lihat perkembangan pesanan laundry kamu.</p>
+                </div>
+                <a href="riwayat.html" class="see-all">Lihat Semua</a>
+            </div>
+
+            <div class="table-container">
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th>ID Pesanan</th>
+                            <th>Layanan</th>
+                            <th>Berat</th>
+                            <th>Total Harga</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dashboardOrderTable">
+                        <tr>
+                            <td colspan="5" class="empty-row">
+                                Belum ada pesanan.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
